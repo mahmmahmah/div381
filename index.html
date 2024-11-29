@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.loader {
+  --color: #a5a5b0;
+  --size: 30px;
+  width: var(--size);
+  height: var(--size);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+}
+body{
+    background-color: #212121;
+}
+.loader span {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color);
+  animation: keyframes-blink .5s alternate infinite linear;
+}
+
+.loader span:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 150ms;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 150ms;
+}
+
+.loader span:nth-child(4) {
+  animation-delay: 280ms;
+}
+
+@keyframes keyframes-blink {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.5) rotate(20deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+    </style>
+</head>
+<body>
+    <center>
+<div class="loader">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+    </center>
+</body>
+</html>
